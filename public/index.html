@@ -20,7 +20,7 @@
 	<meta name="theme-color" content="#2196f3">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="msapplication-tap-highlight" content="no">
-	<title>Login Demo</title>
+	<title>Bookstore Login</title>
 	<link rel="apple-touch-icon" href="img/f7-icon-square.png">
 	<link rel="icon" href="img/f7-icon.png">
 	<link rel="stylesheet" href="./index.css">
@@ -35,7 +35,7 @@
 			<div class="page">
 				<nav class="navbar">
 					<div class="navbar-inner">
-						<h1 class="title sliding">Login Demo</h1>
+						<h1 class="title sliding">Bookstore Login</h1>
 					</div>
 				</nav>
 				<main class="page-content">
@@ -50,7 +50,7 @@
 										data-login-screen=".loginYes">Sign In</a>
 								</p>
 							</div>
-							<p>this is a demo of a leaflet map, integrated with firebase for saving notes.</p>
+							<p>This is a bookstore. People could buy books in this store.</p>
 						</div>
 						<div id="tab2" class="block tab">
 							<div class="row">&nbsp;<button id="logout" class="button button-raised">Logout</button>
@@ -61,7 +61,7 @@
 									<i class="icon f7-icons">add</i>
 								</a>
 							</div>
-							<div id="groceryList">This is for the display of the grocery list</div>
+							<div id="groceryList">This is for the display of the books list</div>
 						</div>
 					</div>
 				</main>
@@ -69,7 +69,7 @@
 					<div class="view">
 						<div class="page">
 							<div class="page-content login-screen-content">
-								<div class="login-screen-title">Login Demo</div>
+								<div class="login-screen-title">Bookstore Login</div>
 								<form id="loginForm">
 									<div class="list">
 										<ul>
@@ -78,22 +78,24 @@
 													<div class="item-title item-label">Username</div>
 													<div class="item-input-wrap">
 														<input type="text" name="username" placeholder="Your email" />
-                    </div>
 													</div>
+												</div>
 											</li>
 											<li class="item-content item-input">
 												<div class="item-inner">
 													<div class="item-title item-label">Password</div>
 													<div class="item-input-wrap">
-														<input type="password" name="password" placeholder="Your password" />
-                    </div>
+														<input type="password" name="password"
+															placeholder="Your password" />
 													</div>
+												</div>
 											</li>
 										</ul>
 									</div>
 									<div class="list">
 										<ul>
-											<li><button type="submit" id="signInButton" class="button button-active">Sign In</a>
+											<li><button type="submit" id="signInButton"
+													class="button button-active">Sign In</a>
 											</li>
 										</ul>
 										<div class="block-footer">
@@ -119,24 +121,35 @@
 													<div class="item-title item-label">Username</div>
 													<div class="item-input-wrap">
 														<input type="text" name="username" placeholder="Your email" />
-                                                   </div>
 													</div>
+												</div>
 											</li>
 											<li class="item-content item-input">
 												<div class="item-inner">
 													<div class="item-title item-label">Password</div>
 													<div class="item-input-wrap">
-														<input type="password" name="password" placeholder="Your password" />
-                                                    </div>
+														<input type="password" name="password"
+															placeholder="Your password" />
 													</div>
+												</div>
 											</li>
 										</ul>
 									</div>
 									<div class="list">
 										<ul>
-											<li><button id="signUpButton" type="submit" class="button button-active">Sign Up</button>
+											<li><button id="signUpButton" type="submit"
+													class="button button-active">Sign Up</button>
 											</li>
 										</ul>
+										<div class="row">
+											<div class="col-md-12">
+												<a class="btn btn-lg btn-google btn-block text-uppercase btn-outline"
+													href="#">
+													<img src="https://img.icons8.com/color/16/000000/google-logo.png">
+													Signup Using Google
+												</a>
+											</div>
+										</div>
 										<div class="block-footer">
 											<p id="signUpError"></p>
 											<p><a class="link login-screen-close" href="#">Close Login Screen</a></p>
@@ -151,11 +164,11 @@
 				<form id="addItem" class="sheet-modal my-sheet list">
 					<div class="toolbar">
 						<div class="toolbar-inner block">
-							<div class="left">Add a Grocery Item</div>
+							<div class="left">Add a Book Item</div>
 							<p id="closeSave" class="segmented segmented-raised">
 								<a href="#" class="button sheet-close">Close
 								</a>
-								<button type="submit"class="button button-active">Save</button>
+								<button type="submit" class="button button-active">Save</button>
 							</p>
 						</div>
 					</div>
@@ -164,12 +177,13 @@
 							<li>
 								<div class="item-content item-input">
 									<div class="item-inner">
-										<label for="item" class="item-title item-label">Item:</label>
+										<label for="item" class="item-title item-label">Book:</label>
 										<div class="item-input-wrap">
-											<input id="item" type="text" name="item" placeholder="Item required" class="">
-                                        </div>
+											<input id="item" type="text" name="item" placeholder="Book required"
+												class="">
 										</div>
 									</div>
+								</div>
 							</li>
 							<li>
 								<div class="item-content item-input">

@@ -18,6 +18,8 @@ $$("#tab2").on("tab:show", () => {
             <div class="card">
             <div class="card-content card-content-padding">${oItems[aKeys[n]].item}</div>
             </div>
+            <button id="need" type="submit" class="button button-active">I bought this</button>\
+            <button id="noNeed" type="submit" class="button button-active">I don't need this</button>
             `
             $$("#groceryList").append(sCard);
         }
@@ -33,4 +35,23 @@ $$(".my-sheet").on("submit", e => {
     const sId = new Date().toISOString().replace(".", "_");
     firebase.database().ref("groceries/" + sUser + "/" + sId).set(oData);
     app.sheet.close(".my-sheet", true);
+});
+
+$$("#signUpButton").on("click", () => {
+    var formData = app.form.convertToData('#signUpForm');
+    //alert("clicked Sign Up: " + JSON.stringify(formData));
+    firebase.auth().createUserWithEmailAndPassword(formData.username, formData.password).then(
+        () => {
+            // could save extra info in a profile here I think.
+            app.loginScreen.close(".signupYes", true);
+        }
+    ).catch((error) => {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        $$("#signUpError").html(errorCode + " error " + errorMessage)
+        console.log(errorCode + " error " + errorMessage);
+        // ...
+    });
+
 });

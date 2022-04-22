@@ -1,3 +1,8 @@
+Team Member:
+Ajesh Wilson 8783264
+Ajith Joseph 8773210
+Karen Tan 8655808
+
 # [loginDemo](https://github.com/rhildred/loginDemo)
 
 ## firebase framework7 v4 login demo for a CAPSTONE team.
